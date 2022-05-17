@@ -1,9 +1,9 @@
 :root {
   font-family: 'DM Sans';
   font-size: 62.5%;
-  --primary-color: rgba(0, 136, 169, 1);
-  --hover-color: rgba(0, 136, 169, 0.8);
-  --bg-menu-color: #24252a;
+  --primary-color: rgba(255, 188, 10, 1);
+  --hover-color: rgba(211, 157, 16, 1);
+  --bg-color: rgb(36, 37, 42);
 }
 
 * {
@@ -14,20 +14,20 @@
 
 body {
   font-size: 1.6rem;
+  overflow-x: hidden;
 }
+
+/* ==================== CABEÇALHO ==================== */
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 10%;
-  background-color: var(--bg-menu-color);
+  padding: 2rem 10%;
+  background-color: var(--bg-color);
 }
 
 .logo {
-  font-size: 2.4rem;
-  font-weight: bolder;
-  color: white;
   cursor: pointer;
 }
 
@@ -62,8 +62,246 @@ button {
   border-radius: 5rem;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+  color: var(--bg-color);
 }
 
 button:hover {
   background-color: var(--hover-color);
+}
+
+/* ==================== RODAPÉ ==================== */
+
+footer {
+  background-color: var(--bg-color);
+  height: auto;
+  width: 100vw;
+  padding-top: 4rem;
+  color: white;
+}
+
+.footer-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-conteudo h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+
+.footer-conteudo p {
+  max-width: 50rem;
+  margin: 1rem auto;
+  line-height: 2.8rem;
+  font-size: 1.4rem;
+}
+
+.footer-conteudo .social {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.footer-conteudo .social li {
+  margin: 0 1rem;
+}
+
+.footer-conteudo .social li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-conteudo .social li a i {
+  font-size: 1.1rem;
+  transition: color 0.4s ease;
+}
+
+.footer-conteudo .social li a:hover i {
+  color: var(--hover-color);
+}
+
+.footer-bottom {
+  background: #090909;
+  width: 100vw;
+  padding: 0.8rem 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 1rem;
+  word-spacing: 0.2rem;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 200;
+}
+
+.footer-bottom span:hover {
+  color: var(--hover-color);
+}
+
+/* ==================== HOME ==================== */
+
+.hero {
+  background: url(/img/background_mdprodutora.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero-conteudo {
+  color: var(--bg-color);
+  padding: 12rem 10% 0 10%;
+  text-align: center;
+}
+
+.hero-conteudo h1 {
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.hero-conteudo p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+/* ==================== EQUIPE ==================== */
+
+.equipe {
+  background: linear-gradient(45deg, #ffbc0a, #d39d10);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.equipe .card-time {
+  position: relative;
+  width: 35rem;
+  height: 19rem;
+  background: white;
+  border-radius: 2rem;
+  box-shadow: 0 3.5rem 8rem rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}
+
+.equipe .card-time:hover {
+  height: 45rem;
+}
+
+.equipe .card-time:hover .imgBx {
+  width: 25rem;
+  height: 25rem;
+}
+
+.equipe .card-time .imgBx {
+  position: absolute;
+  left: 50%;
+  top: -5rem;
+  transform: translateX(-50%);
+  width: 15rem;
+  height: 15rem;
+  background: white;
+  border-radius: 2rem;
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.equipe .card-time .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.equipe .card-time .conteudo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.equipe .card-time .conteudo .detalhes {
+  padding: 4rem;
+  text-align: center;
+  width: 100%;
+  transition: 0.5s;
+  transform: translateY(13rem);
+}
+
+.equipe .card-time:hover .conteudo .detalhes {
+  transform: translateY(0rem);
+}
+
+.equipe .card-time .conteudo .detalhes h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--bg-color);
+  line-height: 1.5rem;
+}
+
+.equipe .card-time .conteudo .detalhes h2 span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.equipe .card-time .conteudo .detalhes .info {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.equipe .card-time .conteudo .detalhes .info h3 {
+  font-size: 1.4rem;
+  color: #555555;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.equipe .card-time .conteudo .detalhes .info h3 span {
+  font-size: 1.1rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.equipe .card-time .conteudo .detalhes .actionBtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.equipe .card-time .conteudo .detalhes .actionBtn button {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: var(--primary-color);
+  color: var(--bg-color);
+  cursor: pointer;
+}
+
+.equipe .card-time .conteudo .detalhes .actionBtn button:nth-child(2) {
+  border: 0.1rem solid #999999;
+  color: #999999;
+  background: white;
 }
