@@ -44,7 +44,7 @@ button {
 
 .nav-links li {
   display: inline-block;
-  padding: 0rem 2rem;
+  padding: 0rem 1rem;
 }
 
 .nav-links li a {
@@ -55,17 +55,17 @@ button {
   color: var(--primary-color);
 }
 
-button {
+header button {
   padding: 0.9rem 2.5rem;
   background-color: var(--primary-color);
   border: none;
-  border-radius: 5rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease 0s;
   color: var(--bg-color);
 }
 
-button:hover {
+header button:hover {
   background-color: var(--hover-color);
 }
 
@@ -175,6 +175,20 @@ footer {
 .hero-conteudo p {
   font-size: 1.8rem;
   margin-bottom: 2rem;
+}
+
+.hero-conteudo button {
+  padding: 0.9rem 2.5rem;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: var(--bg-color);
+}
+
+.hero-conteudo button:hover {
+  background-color: var(--hover-color);
 }
 
 /* ==================== EQUIPE ==================== */
@@ -304,4 +318,91 @@ footer {
   border: 0.1rem solid #999999;
   color: #999999;
   background: white;
+}
+
+/* ==================== PORTFÓLIO ==================== */
+
+.portfolio {
+  margin: 10rem 10% 10rem 10%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  width: 40rem;
+  display: grid;
+  grid-gap: 6rem;
+  grid-template-columns: auto;
+}
+
+.grid-item {
+  background-color: white;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.grid-item:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 3rem;
+}
+
+.card-header {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0d0d0d;
+  margin-bottom: 1.5rem;
+}
+
+.card-text {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: #3d3d3d;
+  margin-bottom: 2.5rem;
+}
+
+.card-btn {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--bg-color);
+  background: var(--primary-color);
+  border-radius: 0.4rem;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+}
+
+.card-btn span {
+  margin-left: 1rem;
+  transition: 0.2s;
+}
+
+.card-btn:hover,
+.card-btn:active {
+  background-color: var(--hover-color);
+}
+
+.card-btn:hover span,
+.card-btn:active span {
+  margin-left: 1.5rem;
 }
